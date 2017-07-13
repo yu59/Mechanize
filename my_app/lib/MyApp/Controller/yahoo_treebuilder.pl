@@ -5,8 +5,7 @@ use LWP::UserAgent;
 use HTML::TreeBuilder;
 
 my $tree = HTML::TreeBuilder->new();
-my $http = HTTP::Lite->new();
-my $url = 'https://www.yahoo.co.jp';
+my $url = 'http://www.yahoo.co.jp';#www.cpan.org
 my $user_agent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)";
 my $ua = LWP::UserAgent->new('agent' => $user_agent);
 my $res = $ua->get($url);
