@@ -11,8 +11,8 @@ sub say { print @_, "\n";}
 
 my $mech = WWW::Mechanize->new();
 
-$mech->get('http://www.google.com');
-
+$mech->get('https://www.google.co.jp/');
+# print $mech->content();
 
 my $res = $mech->submit_form(
 	fields => {
@@ -30,6 +30,6 @@ for my $node (@nodes) {
 	say encode_utf8(decode('shiftjis',$node->as_text)), '(', $node->attr('href'),')';
 }
 for my $node (@nodes) {
-	say $mech->content('http://www.google.com');
+	say $mech->content('http://www.google.co.jp/');
 }
 
